@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gustavo Santos — Analista de Dados</title>
+  <meta name="description" content="Gustavo Santos, Analista de Dados em São Paulo. Power BI, SQL, Excel avançado e storytelling com dados — do dado bruto à decisão." />
+  <meta name="theme-color" content="#06070a" />
+
+  <meta property="og:title" content="Gustavo Santos — Analista de Dados" />
+  <meta property="og:description" content="Do dado bruto à decisão. Power BI, SQL, Excel e storytelling com dados." />
+  <meta property="og:image" content="assets/img/gustavo.jpg" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }
+  </script>
+</head>
+
+<body class="is-loading">
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" aria-hidden="true">
+    <p class="preloader__word"><span class="dot"></span><span class="preloader__text">Olá</span></p>
+    <p class="preloader__count mono"><span class="count">0</span>%</p>
+    <svg class="preloader__curve" viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M0 0 Q500 100 1000 0 Z" /></svg>
+  </div>
+
+  <!-- ============ WEBGL ============ -->
+  <canvas class="webgl" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ CURSOR ============ -->
+  <div class="cursor" aria-hidden="true"><span class="cursor__label">Ver</span></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header">
+    <a href="#home" class="logo" data-magnetic>
+      <span class="logo__copy">©</span>
+      <span class="logo__roll">
+        <span class="logo__a">Data by Gustavo</span>
+        <span class="logo__b">Gustavo Santos</span>
+      </span>
+    </a>
+    <nav class="nav">
+      <a href="#sobre" class="nav__link" data-magnetic>Sobre</a>
+      <a href="#processo" class="nav__link" data-magnetic>Processo</a>
+      <a href="#experiencia" class="nav__link" data-magnetic>Experiência</a>
+      <a href="#projetos" class="nav__link" data-magnetic>Projetos</a>
+      <a href="#contato" class="nav__link" data-magnetic>Contato</a>
+    </nav>
+  </header>
+
+  <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false" data-magnetic>
+    <span></span><span></span>
+  </button>
+
+  <aside class="menu" aria-hidden="true">
+    <div class="menu__inner">
+      <p class="menu__label mono">Navegação</p>
+      <nav class="menu__links">
+        <a href="#home">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#processo">Processo</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="menu__foot">
+        <p class="menu__label mono">Redes</p>
+        <div class="menu__socials">
+          <a href="https://www.linkedin.com/in/santosgustavohenrique/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/gustavo-santos-analytics" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://wa.me/5511916910973?text=Ol%C3%A1%20Gustavo!" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero__top">
+        <div class="hero__role">
+          <!-- <p class="mono hero__kicker"><span class="pulse"></span>Disponível para novos desafios</p> -->
+          <h1 class="hero__title" data-split>
+            Analista de Dados<br />transformando dados<br />em decisões.
+          </h1>
+        </div>
+        <div class="hero__meta">
+          <p class="mono">São Paulo, BR</p>
+          <p class="mono">Power BI · SQL · Excel</p>
+          <div class="hero__cta">
+            <a href="#contato" class="btn btn--solid" data-magnetic><span>Entre em contato</span></a>
+            <a href="https://drive.google.com/uc?export=download&id=10n4jiBduC4B7bTtyk60PZNTMYCW3sR4B" class="btn" target="_blank" rel="noopener" data-magnetic><span>Download CV ↓</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__marquee" aria-label="Gustavo Santos">
+        <div class="marquee__track">
+          <!-- <span>Gustavo Santos <i>—</i></span><span>Gustavo Santos <i>—</i></span><span>Gustavo Santos <i>—</i></span> -->
+          <span>Gustavo Santos</span>
+        </div>
+      </div>
+
+      <div class="hero__scroll mono">
+        <span>Role para explorar</span>
+        <span class="hero__scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE ============ -->
+    <section class="about" id="sobre">
+      <div class="container about__grid">
+        <p class="section-label mono">(01) — Sobre</p>
+        <p class="about__statement" data-reveal-words>
+          Do dado bruto à decisão. Extraio, trato, modelo e entrego dados que viram estratégia. Hoje como Data &amp; Operations Analyst na Zeentech, junto à operação da Ford Motor Company.
+        </p>
+
+        <div class="about__photo-wrap">
+          <figure class="about__photo" data-parallax>
+            <img src="assets/img/gustavo.jpg" alt="Foto de Gustavo Santos" loading="lazy" />
+          </figure>
+          <a href="#contato" class="circle-btn" data-magnetic><span>Vamos<br />conversar</span></a>
+        </div>
+
+        <div class="about__text">
+          <p>Trabalho com coleta, organização, análise e visualização de dados operacionais, com forte interface entre áreas e stakeholders. Apoio a tomada de decisão com dashboards, indicadores e relatórios executivos.</p>
+          <p>Também trago bagagem em gestão de projetos — metodologias ágeis e cascata — acompanhando prazos, indicadores, riscos e entregas.</p>
+          <p class="about__aside">Nos momentos livres, leio e ouço música. Estudo comunicação, oratória, persuasão e storytelling, e aplico isso na forma de apresentar análises.</p>
+
+          <ul class="about__facts mono">
+            <li><span>Base</span><span>São Paulo, Brasil</span></li>
+            <li><span>Formação</span><span>ADS — Padre Anchieta</span></li>
+            <li><span>Idiomas</span><span>PT nativo · ES intermediário · EN básico</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="logos">
+        <p class="section-label mono container">Onde já gerei impacto</p>
+        <div class="logos__marquee">
+          <!-- Basta listar cada empresa uma vez: o JS repete os logos para o loop infinito -->
+          <div class="logos__track" data-marquee>
+            <img src="assets/img/logos/ford.webp" alt="Ford Motor Company" />
+            <img src="assets/img/logos/zeentech.png" alt="Zeentech" />
+            <img src="assets/img/logos/motiva.png" alt="Motiva (Grupo CCR)" />
+            <img src="assets/img/logos/dexco.webp" alt="Dexco" style="--s: 0.5" />
+            <img src="assets/img/logos/brf.png" alt="BRF" />
+            <img src="assets/img/logos/japi.png" alt="Japi" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESSO (cards rolando sozinhos) ============ -->
+    <section class="process" id="processo">
+      <div class="process__inner">
+        <div class="process__head container">
+          <p class="section-label mono">(02) — Como trabalho com dados</p>
+        </div>
+        <h2 class="process__title" data-split>Do dado bruto<br /><em>à decisão.</em></h2>
+        <div class="process__marquee">
+        <div class="process__track" data-marquee>
+          <article class="stage">
+            <p class="stage__num mono">01 / 05</p>
+            <h3 class="stage__title">Extração</h3>
+            <p class="stage__text">Consolido dados de ERPs, bancos de dados, BigQuery, listas do SharePoint e planilhas Excel.</p>
+            <ul class="tags"><li>SQL</li><li>BigQuery</li><li>Power Query</li></ul>
+          </article>
+          <article class="stage">
+            <p class="stage__num mono">02 / 05</p>
+            <h3 class="stage__title">Limpeza &amp; tratamento</h3>
+            <p class="stage__text">Padronização e tratamento de dados vindos de fontes diferentes — para que todo número conte a mesma história.</p>
+            <ul class="tags"><li>Power Query</li><li>SQL</li><li>Excel</li><li>VBA</li></ul>
+          </article>
+          <article class="stage">
+            <p class="stage__num mono">03 / 05</p>
+            <h3 class="stage__title">Modelagem</h3>
+            <p class="stage__text">Modelagem em esquema estrela, criação de medidas e indicadores que sustentam a análise.</p>
+            <ul class="tags"><li>Power BI</li><li>DAX</li><li>Star Schema</li></ul>
+          </article>
+          <article class="stage">
+            <p class="stage__num mono">04 / 05</p>
+            <h3 class="stage__title">Automação</h3>
+            <p class="stage__text">Automação de rotinas e relatórios recorrentes, liberando tempo para o que importa: a análise.</p>
+            <ul class="tags"><li>VBA</li><li>Excel</li><li>Apps Script</li><li>IA</li></ul>
+          </article>
+          <article class="stage">
+            <p class="stage__num mono">05 / 05</p>
+            <h3 class="stage__title">Entrega</h3>
+            <p class="stage__text">Dashboards, relatórios gerenciais e apresentações com storytelling para quem decide.</p>
+            <ul class="tags"><li>Power BI</li><li>Excel</li><li>PowerPoint</li></ul>
+          </article>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIÊNCIA ============ -->
+    <section class="experience" id="experiencia">
+      <div class="container">
+        <p class="section-label mono">(03) — Experiência &amp; trajetória</p>
+        <h2 class="big-title" data-split>Experiência</h2>
+
+        <div class="jobs">
+          <details class="job" open>
+            <summary class="job__row" data-cursor="Abrir">
+              <span class="job__company">Zeentech</span>
+              <span class="job__role">Analista de Dados &amp; Facilities PL</span>
+              <span class="job__date mono"><span class="pulse"></span>Atualmente</span>
+              <span class="job__toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="job__body">
+              <p class="job__context mono">Atuação junto à operação da Ford Motor Company</p>
+              <ul>
+                <li>Atuação na Ford Motor Company, com presença ativa nas operações de Facilities IFM da América do Sul: Brasil, Peru, Chile, Colômbia e Argentina.</li>
+                <li>Apoio à gestão administrativa do modelo IFM em múltiplos galpões e unidades, integrando a visão operacional de campo com a análise e consolidação de dados físicos, operacionais e financeiros.</li>
+                <li>Desenvolvimento de dashboards interativos e relatórios gerenciais em Power BI (DAX), Power Query e Excel avançado.</li>
+                <li>Transformação de dados complexos da operação regional em insights estratégicos para apoio à tomada de decisão.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="job">
+            <summary class="job__row" data-cursor="Abrir">
+              <span class="job__company">Motiva <small>(Grupo CCR)</small></span>
+              <span class="job__role">Analista de Dados &amp; Projetos</span>
+              <span class="job__date mono">jun/2025 — mar/2026</span>
+              <span class="job__toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="job__body">
+              <p class="job__context mono">Maior empresa de mobilidade da América Latina</p>
+              <ul>
+                <li>Consolidei, analisei e estruturei dados operacionais e de projetos (Automação, Segurança Perimetral e Videomonitoramento), gerando relatórios analíticos que suportaram decisões de planejamento e priorização.</li>
+                <li>Desenvolvi e monitorei KPIs em Excel avançado e Power BI, ampliando a visibilidade das métricas e apoiando a liderança com insights de desempenho.</li>
+                <li>Extraí, consolidei e analisei dados de execução de projetos, requisições e medições financeiras com SAP (PS) e MS Project, garantindo confiabilidade para análises gerenciais.</li>
+                <li>Atuei como ponto focal em Tecnologia Operacional, fazendo a interface com PMO, Supply, Administrativo, Compliance e Fiscal.</li>
+                <li>Desenvolvi ferramentas e planilhas gerenciais de suporte aos analistas, além de outras soluções corporativas.</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJETOS ============ -->
+    <section class="projects" id="projetos">
+      <div class="container">
+        <p class="section-label mono">(04) — Cases &amp; soluções</p>
+        <div class="projects__head">
+          <h2 class="big-title" data-split>Projetos</h2>
+          <div class="filters" role="tablist">
+            <button class="filter is-active" data-filter="all">Todos</button>
+            <button class="filter" data-filter="powerbi">Power BI</button>
+            <button class="filter" data-filter="looker">Looker</button>
+            <button class="filter" data-filter="excel">Excel</button>
+            <button class="filter" data-filter="sql">SQL</button>
+            <button class="filter" data-filter="corp">Corporativos</button>
+          </div>
+        </div>
+
+        <div class="plist">
+          <div class="plist__head mono"><span>Projeto</span><span>Stack</span><span>Tipo</span></div>
+
+          <button class="prow" data-tags="powerbi" data-project="eletro" data-cursor="Ver" data-preview="assets/img/projetos/eletro-capa.png">
+            <span class="prow__name">Hashtag Eletro</span>
+            <span class="prow__stack">Power BI · DAX · Modelo Estrela</span>
+            <span class="prow__type mono">Dashboard</span>
+          </button>
+
+          <button class="prow" data-tags="looker" data-project="lkbarber" data-cursor="Ver" data-preview="lk">
+            <span class="prow__name">L&amp;K Barbearia</span>
+            <span class="prow__stack">Looker Studio · Apps Script · Sheets</span>
+            <span class="prow__type mono">Sistema em produção</span>
+          </button>
+
+          <div class="prow prow--soon" data-tags="excel">
+            <span class="prow__name">Excel &amp; VBA</span>
+            <span class="prow__stack">Excel · VBA · Dashboards</span>
+            <span class="prow__type mono">Em breve</span>
+          </div>
+          <div class="prow prow--soon" data-tags="sql">
+            <span class="prow__name">Análise em SQL</span>
+            <span class="prow__stack">SQL · Data Analysis · Queries</span>
+            <span class="prow__type mono">Em breve</span>
+          </div>
+          <div class="prow prow--soon" data-tags="corp">
+            <span class="prow__name">Projeto corporativo</span>
+            <span class="prow__stack">Gestão · Processos · BI</span>
+            <span class="prow__type mono">Em breve</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Preview que segue o mouse -->
+      <div class="preview" aria-hidden="true">
+        <div class="preview__inner">
+          <img class="preview__img" src="assets/img/projetos/eletro-capa.png" alt="" />
+          <div class="preview__lk"><span>L&amp;K</span><small>Sistema de gestão</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal de projeto -->
+    <div class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal__backdrop" data-close></div>
+      <div class="modal__panel" data-lenis-prevent>
+        <button class="modal__close" data-close aria-label="Fechar">×</button>
+
+        <article class="modal__content" data-content="eletro">
+          <p class="mono modal__kicker">Power BI · Dashboard de Vendas</p>
+          <h3>Hashtag Eletro</h3>
+          <p>Dashboard gerencial em Power BI de uma rede varejista de eletrônicos, com modelagem estrela, 31 medidas DAX (time intelligence, TOPN, SUMX), análise de devoluções e comparativos MoM/YoY.</p>
+          <ul class="tags"><li>Power BI</li><li>DAX</li><li>Power Query</li><li>ETL</li><li>Modelo Estrela</li></ul>
+          <div class="modal__actions">
+            <a class="btn btn--solid" href="https://app.powerbi.com/view?r=eyJrIjoiNzgxM2I2NzktNDJlOS00MWNlLWEwNDctNWY0NWY0NjE4NmVhIiwidCI6ImM0NDFhOGY2LTFhYzAtNDc2OC05Yzg0LWMzOTVkOThmMzhjNyJ9" target="_blank" rel="noopener"><span>Ver dashboard ↗</span></a>
+            <a class="btn" href="https://github.com/gustavo-santos-analytics/Hashtag-Eletro-Dashboard-de-Vendas" target="_blank" rel="noopener"><span>Código ↗</span></a>
+          </div>
+          <div class="modal__gallery">
+            <img src="assets/img/projetos/eletro-capa.png" alt="Capa do dashboard" loading="lazy" />
+            <img src="assets/img/projetos/eletro-geral.png" alt="Visão geral de vendas" loading="lazy" />
+            <img src="assets/img/projetos/eletro-analises.png" alt="Análises" loading="lazy" />
+            <img src="assets/img/projetos/eletro-devolucoes.png" alt="Análise de devoluções" loading="lazy" />
+          </div>
+        </article>
+
+        <article class="modal__content" data-content="lkbarber">
+          <p class="mono modal__kicker">Sistema de gestão · Em produção</p>
+          <h3>L&amp;K Barbearia</h3>
+          <p>De caderninho para um sistema completo de gestão em tempo real. Uma barbearia com 3 barbeiros controlava tudo no papel — sem visibilidade de faturamento, comissões, estoque ou custos.</p>
+          <p>Construí do zero um sistema em 4 camadas: entrada via Google Forms + site HTML, automação com Google Apps Script, base estruturada em Google Sheets e dashboard gerencial em tempo real no Looker Studio — com custo de manutenção zero.</p>
+          <ul class="tags"><li>Looker Studio</li><li>Apps Script</li><li>Google Sheets</li><li>HTML/CSS/JS</li><li>GitHub Pages</li></ul>
+          <div class="modal__actions">
+            <a class="btn btn--solid" href="https://gustavo-santos-analytics.github.io/lk-barber-command-center/" target="_blank" rel="noopener"><span>Ver site ao vivo ↗</span></a>
+            <a class="btn" href="https://github.com/gustavo-santos-analytics/lk-barber-command-center" target="_blank" rel="noopener"><span>Código ↗</span></a>
+          </div>
+          <div class="modal__arch mono">
+            <div><b>Entrada</b><span>Google Forms + Site HTML</span></div>
+            <div><b>Automação</b><span>Google Apps Script</span></div>
+            <div><b>Armazenamento</b><span>Google Sheets (6 abas)</span></div>
+            <div><b>Visualização</b><span>Looker Studio</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- ============ STACK ============ -->
+    <section class="stack" id="stack">
+      <div class="container">
+        <p class="section-label mono">(05) — Tech stack &amp; formação</p>
+        <h2 class="big-title" data-split>Ferramentas</h2>
+
+        <div class="tools">
+          <div class="tool" data-tilt><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuresqldatabase/azuresqldatabase-original.svg" alt="" /><b>SQL</b><span>Banco de dados</span></div>
+          <div class="tool" data-tilt><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="19" y="4" width="7" height="24" rx="2" fill="#F2C811"/><rect x="12.5" y="10" width="7" height="18" rx="2" fill="#E8B10D"/><rect x="6" y="16" width="7" height="12" rx="2" fill="#D49C08"/></svg><b>Power BI</b><span>Business Intelligence</span></div>
+          <div class="tool" data-tilt><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="9" y="4" width="19" height="24" rx="2" fill="#21A366"/><rect x="4" y="9" width="14" height="14" rx="2" fill="#107C41"/><path d="M7.5 12.5h2.6l1.6 2.9 1.7-2.9h2.5l-2.8 4 2.9 4.1h-2.6l-1.7-3-1.7 3H7.4l2.9-4.1z" fill="#fff"/></svg><b>Excel</b><span>Avançado + VBA</span></div>
+          <div class="tool" data-tilt><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" /><b>Python</b><span>Programação</span></div>
+          <div class="tool" data-tilt><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l11 6v14l-11 6-11-6V9z" fill="none" stroke="#669DF6" stroke-width="2.4"/><circle cx="16" cy="16" r="4.5" fill="#4285F4"/></svg><b>BigQuery</b><span>Data warehouse</span></div>
+          <div class="tool" data-tilt><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="" /><b>Figma</b><span>Design</span></div>
+          <div class="tool" data-tilt><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" class="invert" /><b>Git &amp; GitHub</b><span>Versionamento</span></div>
+          <div class="tool" data-tilt><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" /><b>HTML · CSS · JS</b><span>Web</span></div>
+        </div>
+
+        <div class="skills-marquee">
+          <div class="skills-marquee__track mono" data-marquee>
+            <span>Business Intelligence</span><span>Data Analytics</span><span>Modelagem (Star Schema)</span><span>ETL</span><span>Data Visualization</span><span>Dashboards Executivos</span><span>Storytelling com Dados</span><span>KPIs &amp; Indicadores</span><span>Data-Driven Decision Making</span><span>Análise de Processos</span>
+          </div>
+        </div>
+
+        <div class="split">
+          <div class="courses">
+            <p class="section-label mono">Cursos &amp; formações</p>
+            <a class="course" href="https://xperiun.com/ed/formacao/" target="_blank" rel="noopener"><img src="assets/img/cursos/xperiun.png" alt="" /><span><b>Data Analytics Professional</b><small>Xperiun</small></span><i>↗</i></a>
+            <a class="course" href="https://escoladnc.com.br/" target="_blank" rel="noopener"><img src="assets/img/cursos/dnc.jpg" alt="" /><span><b>Engenharia de Dados</b><small>Escola DNC</small></span><i>↗</i></a>
+            <a class="course" href="https://www.hashtagtreinamentos.com/" target="_blank" rel="noopener"><img src="assets/img/cursos/hashtag.jpg" alt="" /><span><b>Análise de Dados</b><small>Hashtag Treinamentos</small></span><i>↗</i></a>
+            <a class="course" href="https://anchieta.br/" target="_blank" rel="noopener"><img src="assets/img/cursos/anchieta.jpg" alt="" /><span><b>Análise e Desenvolvimento de Sistemas</b><small>Centro Universitário Padre Anchieta</small></span><i>↗</i></a>
+          </div>
+
+          <div class="ai">
+            <p class="section-label mono">IA generativa como apoio</p>
+            <p class="ai__lead">Uso Claude, Claude Code, ChatGPT, Gemini e outras IAs como apoio ao trabalho analítico, sempre com revisão e validação humana.</p>
+            <div class="ai__item"><b>Desenvolvimento</b><p>Escrita, revisão e depuração de fórmulas, consultas e scripts (DAX, Power Query, SQL, VBA).</p></div>
+            <div class="ai__item"><b>Documentação</b><p>Estruturação de narrativas e apresentações que facilitam a compreensão dos dados.</p></div>
+            <div class="ai__item"><b>Boas práticas</b><p>Valido toda saída antes de usar e não compartilho dados sensíveis com ferramentas externas.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DEPOIMENTOS ============ -->
+    <section class="testimonials" id="depoimentos">
+      <div class="container">
+        <p class="section-label mono">(06) — O que dizem sobre meu trabalho</p>
+
+        <div class="quotes">
+          <figure class="quote is-active">
+            <blockquote>“Profissional com rápida adaptação ao negócio e forte senso de responsabilidade. Em pouco tempo, passou a gerar valor real por meio da melhoria de processos e da aplicação consistente de Data Analytics e Business Intelligence. Destaca-se pela comunicação clara, colaboração com o time e pela capacidade de transformar dados em insights acionáveis.”</blockquote>
+            <figcaption><span class="avatar">AS</span><span><b>Adalberto Souza</b><small>Senior Automation Engineer · Lead Automation Engineer</small><small class="mono">Supervisionava Gustavo diretamente</small></span></figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>“Tive a oportunidade de trabalhar com o Gustavo por quase dois anos e pude acompanhar sua rápida curva de aprendizado, capacidade de solucionar problemas e ótima comunicação com fornecedores e clientes internos. Destacou-se no Projeto PMOC, onde foi responsável pelo estudo de viabilidade, aprovação, implementação e operação.”</blockquote>
+            <figcaption><span class="avatar">OE</span><span><b>Otávio Elias de Souza</b><small>Engenheiro de Processos e Produto</small><small class="mono">Supervisionava Gustavo diretamente</small></span></figcaption>
+          </figure>
+        </div>
+
+        <div class="quotes__nav">
+          <button class="qbtn" data-dir="-1" aria-label="Depoimento anterior" data-magnetic>←</button>
+          <span class="mono quotes__count"><span class="qi">01</span> / 02</span>
+          <button class="qbtn" data-dir="1" aria-label="Próximo depoimento" data-magnetic>→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="contact" id="contato">
+      <div class="container">
+        <div class="contact__head">
+          <img class="contact__avatar" src="assets/img/gustavo.jpg" alt="" loading="lazy" />
+          <h2 class="contact__title" data-split>Vamos<br />conversar?</h2>
+        </div>
+
+        <div class="contact__line">
+          <a href="https://wa.me/5511916910973?text=Ol%C3%A1%20Gustavo!" target="_blank" rel="noopener" class="contact__circle" data-magnetic data-magnetic-strength="0.5">
+            <span>Fale<br />comigo</span>
+          </a>
+        </div>
+
+        <div class="contact__pills">
+          <a href="mailto:gustavohsantoscontato@gmail.com" class="btn btn--lg" data-magnetic><span>gustavohsantoscontato@gmail.com</span></a>
+          <a href="https://wa.me/5511916910973?text=Ol%C3%A1%20Gustavo!" target="_blank" rel="noopener" class="btn btn--lg" data-magnetic><span>+55 11 91691-0973</span></a>
+        </div>
+      </div>
+
+      <footer class="footer container">
+        <div class="footer__col">
+          <p class="mono footer__label">Versão</p>
+          <p>2026 © Gustavo Santos</p>
+        </div>
+        <div class="footer__col">
+          <p class="mono footer__label">Horário local</p>
+          <p class="clock">--:-- BRT</p>
+        </div>
+        <div class="footer__col footer__socials">
+          <p class="mono footer__label">Redes</p>
+          <p>
+            <a href="https://www.linkedin.com/in/santosgustavohenrique/" target="_blank" rel="noopener" data-magnetic>LinkedIn</a>
+            <a href="https://github.com/gustavo-santos-analytics" target="_blank" rel="noopener" data-magnetic>GitHub</a>
+            <a href="https://wa.me/5511916910973?text=Ol%C3%A1%20Gustavo!" target="_blank" rel="noopener" data-magnetic>WhatsApp</a>
+          </p>
+        </div>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
